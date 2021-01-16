@@ -41,6 +41,7 @@ export class HomePageComponent implements OnInit {
     this.businessSearchService.searchingData(
       this.searchBusinessForm.value
     ).subscribe((res:any)=>{
+      // console.log(res.data)
       if(res['success']){
         console.log("success")
       }else{

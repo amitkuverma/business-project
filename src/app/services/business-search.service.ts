@@ -7,16 +7,16 @@ import { environment } from 'src/environments/environment';
 })
 export class BusinessSearchService {
   private apiPath: string;
-  private business: string;
+  private search: string;
 
   constructor(private httpClient: HttpClient) { 
     const env: any = environment;
     this.apiPath = env.paths.api;
-    this.business = 'business-search/search-data';
+    this.search = 'searching';
   }
 
-  searchingData( sendSearchData ){
-    return this.httpClient.post<object>(`${this.apiPath}/${this.business}/`, sendSearchData)
+  searchingData( sendingSearchData ){
+    return this.httpClient.post<object>(`${this.apiPath}/${this.search}/`, sendingSearchData)
   }
 
 }
